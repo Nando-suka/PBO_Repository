@@ -30,8 +30,6 @@ public class App {
         System.out.print("Tolong masukkan tempat kesukaan Anda: ");
         String tempat = scanner.nextLine();
 
-        int 
-
         System.out.println("\n--- Output ---");
         System.out.println("Nama: " + name);
         System.out.println("Umur: "+ age);
