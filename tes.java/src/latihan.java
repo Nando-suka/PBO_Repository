@@ -27,6 +27,9 @@ public class latihan {
         System.out.println("Hasilnya adalah: " + kurang);
         System.out.println("------- Perkalian -------");
         System.out.println("Hasilnya adalah: " + kali);
+        if (kurang < 10) {
+            System.out.println("Hasilnya kurang dari 10.");
+        }
 
     }
 }

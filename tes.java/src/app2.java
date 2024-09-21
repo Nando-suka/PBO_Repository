@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class app2 {
     public static void main(String[] args) throws Exception {
         Scanner scanner = new Scanner(System.in);
@@ -7,8 +9,9 @@ public class app2 {
         System.out.print("Ibukota Indonesia adalah Jakarta [y/t]: ");
 
         String pilihan = scanner.nextLine();
+        String jawaban = "y";                                                                                                               
 
-        if (pilihan == "y") {
+        if (pilihan == jawaban) {
             System.out.println("Iya jawaban Anda benar.");
         }
         else {

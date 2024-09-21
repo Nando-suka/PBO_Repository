@@ -30,9 +30,20 @@ public class GUIInputExample {
         ageField.setBounds(150, 50, 200, 25);
         frame.add(ageField);
 
+        // Membuat JLabel unruk label
+        JLabel klubLabel = new JLabel("Masukkan Klub:");
+        klubLabel.setBounds(10, 100, 220, 25);
+        frame.add(klubLabel);
+
+        // Membuat JTextfield untuk input klub kesukaan
+        JTextField klub = new JTextField();
+        klub.setBounds(150, 100, 200, 25);
+        frame.add(klub);
+
+
         // Membuat JButton untuk submit
         JButton submitButton = new JButton("Submit");
-        submitButton.setBounds(150, 90, 100, 25);
+        submitButton.setBounds(180, 130, 100, 25);
         frame.add(submitButton);
 
         // Menambahkan ActionListener ke button untuk mengambil input pengguna
@@ -42,9 +53,10 @@ public class GUIInputExample {
                 // Mengambil input dari text fields
                 String name = nameField.getText();
                 String age = ageField.getText();
+                String klubKesukaan = klub.getText();
 
                 // Menampilkan input di dialog box
-                JOptionPane.showMessageDialog(frame, "Nama: " + name + "\nUmur: " + age);
+                JOptionPane.showMessageDialog(frame, "Nama: " + name + "\nUmur: " + age + "\nKlub Kesukaan: " + klubKesukaan);
             }
         });
 
