@@ -1,1 +1,2 @@
 Ini adalah contoh dari belajar menggunakan branch dengan platform github
+Ada yang kami tambahkan dari fitur di github kami.
