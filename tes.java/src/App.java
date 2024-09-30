@@ -24,8 +24,9 @@ public class App {
         System.out.print("Masukkan nomor hp Anda: ");
         int nomor = scanner.nextInt();
 
-        System.out.print("Masukkan manga yang sedang Anda baca: ");
+        System.out.print("Masukkan manga yang sedang Anda baca: \n");
         String manga = scanner.nextLine();
+
 
         System.out.print("Tolong masukkan tempat kesukaan Anda: ");
         String tempat = scanner.nextLine();

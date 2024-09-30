@@ -16,6 +16,11 @@ public class belajarDesktop {
 
         // tampilkan layer jendela
         mywindow.setVisible(true);
+
+        // Menambahkan button 1
+        Button B1 = new Button("OK");
+        B1.setBounds(100, 50, 50, 50);
+        mywindow.add(B1);
   }
 }
 

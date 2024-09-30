@@ -1,7 +1,6 @@
 import javax.swing.JFrame;
 import javax.swing.JButton;
 
-
 public class SimpleGUI2 {
     
     public static void main(String[] args) {
@@ -18,6 +17,9 @@ public class SimpleGUI2 {
         // Memanggil button dengan JButton
         JButton button = new JButton("Finish");
         frame.add(button);
+
+        JButton tombol = new JButton("Click");
+        frame.add(tombol);
 
         // Menampilkan frame
         frame.setVisible(true);
