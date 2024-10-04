@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="237.0" prefWidth="302.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sisfo.SistemInformasiHotelController">
+   <children>
+      <ChoiceBox layoutX="94.0" layoutY="99.0" prefWidth="150.0" />
+      <Text fill="#061e20" layoutX="46.0" layoutY="15.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Selamat Datang di Sistem Informasi Hotel" textAlignment="CENTER" wrappingWidth="221.95938110351562">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Text>
+      <Text layoutX="14.0" layoutY="117.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Kode Kamar" />
+      <Text layoutX="11.0" layoutY="244.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nama Kamar" />
+      <Text layoutX="14.0" layoutY="168.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tipe Kamar" />
+      <Text layoutX="14.0" layoutY="206.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Harga Kamar" />
+      <TextField layoutX="89.0" layoutY="54.0" prefHeight="26.0" prefWidth="192.0" />
+      <RadioButton layoutX="104.0" layoutY="155.0" mnemonicParsing="false" text="Spesial" />
+      <RadioButton layoutX="172.0" layoutY="155.0" mnemonicParsing="false" text="Sedang" />
+      <RadioButton layoutX="247.0" layoutY="155.0" mnemonicParsing="false" text="Murah" />
+      <TextField layoutX="96.0" layoutY="189.0" />
+      <Text layoutX="20.0" layoutY="282.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cek out" />
+      <Text layoutX="24.0" layoutY="316.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Cek In" />
+      <Text layoutX="6.0" layoutY="360.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lama Menginap" />
+      <TextField layoutX="99.0" layoutY="344.0" />
+      <TextField layoutX="95.0" layoutY="228.0" />
+      <TextField layoutX="95.0" layoutY="299.0" />
+      <TextField layoutX="95.0" layoutY="265.0" />
+      <Text layoutX="16.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nama Tamu" />
+   </children>
+</AnchorPane>
