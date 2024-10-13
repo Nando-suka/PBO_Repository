@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="74.0" prefWidth="289.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/22" fx:controller="utama.KetigaController">
+   <children>
+      <Text layoutX="8.0" layoutY="139.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pilih kesukaan Anda" />
+      <Text layoutX="8.0" layoutY="95.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Masukkan umur Anda" />
+      <Text layoutX="107.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Selamat datang di form" />
+      <Text layoutX="8.0" layoutY="54.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Masukkan Nama Anda" wrappingWidth="124.5" />
+      <TextField layoutX="138.0" layoutY="37.0" />
+      <ComboBox layoutX="138.0" layoutY="77.0" prefWidth="150.0" />
+      <ComboBox layoutX="138.0" layoutY="122.0" prefWidth="150.0" />
+      <Text layoutX="14.0" layoutY="205.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Komentar*" />
+      <TextArea layoutX="132.0" layoutY="161.0" prefHeight="200.0" prefWidth="200.0" />
+    <Button layoutX="112.0" layoutY="392.0" mnemonicParsing="false" text="Selesai" />
+   </children>
+</AnchorPane>
