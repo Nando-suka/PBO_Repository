@@ -6,6 +6,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 import javax.swing.JOptionPane;
@@ -55,12 +56,15 @@ public class contohController {
     
     // Membuat fungsi rekamDataSeluruhPesanBaru()
     private void rekamDataSeluruhPesanBaru() {
+    	// Membuat file pada disk sebagai tujuan perekaman data (output stream)
     	try {
     		FileOutputStream file = new FileOutputStream("pesan.dat");
+    		// Membuat objek stream untuk menyimpan data pesan yang sudah berbentuk serial
     		
     		ObjectOutputStream serializedDataPesan =
     				new ObjectOutputStream(file);
     		
+    		// Melakukan serialisasi ke output stream
     		serializedDataPesan.writeObject(daftarPesan);
     	} catch (FileNotFoundException e) {
     		e.printStackTrace();
@@ -88,18 +92,20 @@ public class contohController {
     				+ "\nEmail: %s"
     				+ "\nNomor Handphone: %s"
     				+ "\nJumlah Tiket: %s"
-    				+ "\nJenis TIket: %s"
+    				+ "\nJenis Tiket: %s"
+    				+ "\nTanggal Pembelian: %s"
     				+ "\n\n",
     				d.getNamaPembeli(),
     				d.getNamaEmail(),
     				d.getNomorHP(),
     				d.getJumlahTiket(),
-    				d.getJenisTiket()
+    				d.getJenisTiket(),
+    				d.getTanggalPembelian()
     				);
     		
-    		// 3, Menampilkan dengan joptionpane
-    		JOptionPane.showMessageDialog(null, seluruhDaftarPesanan);
     	}
+    	// 3, Menampilkan dengan joptionpane
+		JOptionPane.showMessageDialog(null, seluruhDaftarPesanan);
     }
     
      // Membuat fungsi initialize
@@ -118,6 +124,9 @@ public class contohController {
     			 new SpinnerValueFactory.IntegerSpinnerValueFactory(1, 5, 1);
     	 
     	 spinjumlahtiket.setValueFactory(valueJumlahTiket);
+    	 
+    	 // Membaca daftar pesan dari disk
+    	 bacaDataSeluruhPesanDariDisk();
     }
     
     @SuppressWarnings("unchecked")
@@ -149,6 +158,7 @@ public class contohController {
         String namaEmail = txtnamaemail.getText();
         int jumlahTiket = spinjumlahtiket.getValue();
         char jenisTiket = 'E';
+        LocalDate tanggalPembelian = datepickertanggalbutt.getValue();
         if (cmbjenistiket.getSelectionModel()
         		.getSelectedIndex()==1) {
         			jenisTiket = 'S';
@@ -160,7 +170,7 @@ public class contohController {
         
         // 2. Membuat ibjek baru dari class pesan 
         pesan pesanBaru = new pesan(namaPembeli, nomorHP, namaEmail,
-        		jenisTiket, jumlahTiket);
+        		jenisTiket, jumlahTiket, tanggalPembelian);
         
         // 3. Menambah objek baru ke dalam koleksi/arraylist
         daftarPesan.add(pesanBaru);
