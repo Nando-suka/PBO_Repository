@@ -4,3 +4,5 @@ Berikut tools yang saya gunakan:
   - FXML
   - MySql
   - ChatGpt
+  - Laragon
+  - Connector
