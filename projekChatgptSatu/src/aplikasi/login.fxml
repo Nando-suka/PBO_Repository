@@ -5,13 +5,31 @@
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
 
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/22" 
-            fx:controller="aplikasi.LoginController" prefHeight="300.0" prefWidth="400.0">
-    <Label layoutX="150.0" layoutY="40.0" text="Login" style="-fx-font-size: 24;" />
-    <Label layoutX="80.0" layoutY="100.0" text="Username:" />
-    <TextField fx:id="usernameField" layoutX="150.0" layoutY="100.0" />
-    <Label layoutX="80.0" layoutY="150.0" text="Password:" />
-    <PasswordField fx:id="passwordField" layoutX="150.0" layoutY="150.0" />
-    <Button layoutX="150.0" layoutY="200.0" text="Login" onAction="#handleLogin" />
-</AnchorPane>
+<VBox alignment="CENTER" prefHeight="296.0" prefWidth="294.0" spacing="10" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="aplikasi.WelcomeController">
+   <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Selamat Datang">
+      <font>
+         <Font size="24.0" />
+      </font>
+   </Text>
+    <TextField fx:id="usernameField" promptText="Username" />
+    <PasswordField fx:id="passwordField" promptText="Password" />
+    <Button onAction="#handleLogin" text="Login" />
+    <Label fx:id="messageLabel" />
+   <AnchorPane prefHeight="204.0" prefWidth="288.0">
+      <children>
+         <Text layoutX="166.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tidak bisa masuk?" />
+         <Text layoutX="187.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="|" textAlignment="CENTER" />
+         <Text layoutX="187.0" layoutY="45.0" strokeType="OUTSIDE" strokeWidth="0.0" text="|" textAlignment="CENTER" />
+         <Text layoutX="193.0" layoutY="53.0" strokeType="OUTSIDE" strokeWidth="0.0" text="&gt;" textAlignment="CENTER" wrappingWidth="13.408966064453125">
+            <font>
+               <Font size="18.0" />
+            </font>
+         </Text>
+          <Button layoutX="209.0" layoutY="37.0" mnemonicParsing="false" onAction="#handleRegister" text="Registrasi" />
+      </children>
+   </AnchorPane>
+</VBox>
