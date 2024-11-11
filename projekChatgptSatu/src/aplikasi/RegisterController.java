@@ -20,6 +20,9 @@ public class RegisterController {
 
     @FXML
     private PasswordField confirmPasswordField;
+    
+    @FXML
+    private TextField tmptTinggalfield; 
 
     @FXML
     private Label messageLabel;
@@ -42,29 +45,31 @@ public class RegisterController {
     public void handleRegisterSubmit(ActionEvent event) {
         String username = usernameField.getText();
         String password = passwordField.getText();
+        String tempatTinggal = tmptTinggalfield.getText();
         String confirmPassword = confirmPasswordField.getText();
 
         if (password.equals(confirmPassword)) {
-            if (registerUser(username, password)) {
+            if (registerUser(username, password, tempatTinggal)) {
                 messageLabel.setText("Registrasi berhasil!");
             } else {
                 messageLabel.setText("Username sudah terdaftar!");
             }
         } else {
-            messageLabel.setText("Password dan konfirmasi password tidak cocok!");
+            messageLabel.setText("Password tidak cocok!");
         }
     }
 
     // Method untuk mendaftar ke database
-    private boolean registerUser(String username, String password) {
+    private boolean registerUser(String username, String password, String tempatTinggal) {
         boolean isRegistered = false;
-        String query = "INSERT INTO users (username, password) VALUES (?, ?)";
+        String query = "INSERT INTO users (username, password, tmptTinggal) VALUES (?, ?, ?)";
 
         try (Connection conn = connectDB();
              PreparedStatement stmt = conn.prepareStatement(query)) {
 
             stmt.setString(1, username);
             stmt.setString(2, password);
+            stmt.setString(3, tempatTinggal);
 
             int rowsAffected = stmt.executeUpdate();
             if (rowsAffected > 0) {

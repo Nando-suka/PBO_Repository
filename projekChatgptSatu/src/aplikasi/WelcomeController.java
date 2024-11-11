@@ -8,8 +8,10 @@ import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.image.ImageView;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.scene.layout.StackPane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
@@ -53,15 +55,34 @@ public class WelcomeController {
         if (validateLogin(username, password)) {
             Stage currentStage = (Stage) usernameField.getScene().getWindow();
             currentStage.close();
-
+            
+            // Stage baru untuk tampilan selamat datang
             Stage welcomeStage = new Stage();
             StackPane pane = new StackPane();
+            
+            // Objek text untuk pesan selamat datang
             Text welcomeText = new Text("Selamat datang, " + username + "!\n\n\n");
             Text percobaanText = new Text("Selamat menikmati, fitur yang ada disini :)");
+            
+            // Tempat untuk menambahkan gambar
+			Image image = new Image("file:src/Gambar/tes1.png");
+            ImageView imageView = new ImageView(image);
+            
+            // Mengatur ukuran Gambar
+            imageView.setFitWidth(100);
+            imageView.setFitHeight(100);
+            imageView.setPreserveRatio(true);
+            
+            // Mengatur tata letak gambar di dalam StackPane
+            imageView.setTranslateY(-100);
+                     
+            // Menambahkan gambar dan teks ke dalam StackPane
             pane.getChildren().add(welcomeText);
             pane.getChildren().add(percobaanText);
-            Scene welcomeScene = new Scene(pane, 300, 200);
-
+            pane.getChildren().add(imageView);
+            
+            // Menampilkan scene
+            Scene welcomeScene = new Scene(pane, 500, 300);
             welcomeStage.setTitle("Welcome Screen");
             welcomeStage.setScene(welcomeScene);
             welcomeStage.show();

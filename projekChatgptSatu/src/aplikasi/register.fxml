@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
 <?import javafx.scene.control.TextField?>
@@ -10,18 +9,17 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<VBox alignment="CENTER" prefHeight="300.0" prefWidth="300.0" spacing="10" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="aplikasi.RegisterController">
+<VBox alignment="CENTER" prefHeight="362.0" prefWidth="344.0" spacing="10" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="aplikasi.RegisterController">
     <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Pendaftaran Akun">
         <font>
             <Font size="24.0" />
         </font>
     </Text>
     <TextField fx:id="usernameField" promptText="Username" />
+   <TextField fx:id="tmptTinggalfield" layoutX="10.0" layoutY="52.0" promptText="Tempat tinggal" />
     <PasswordField fx:id="passwordField" promptText="Password" />
-   <ChoiceBox prefHeight="26.0" prefWidth="332.0" />
-   <ChoiceBox prefHeight="26.0" prefWidth="356.0" />
     <PasswordField fx:id="confirmPasswordField" promptText="Konfirmasi Password" />
     <Button onAction="#handleRegisterSubmit" text="Registrasi" />
-    <Label fx:id="messageLabel" prefHeight="22.0" prefWidth="101.0" />
+    <Label fx:id="messageLabel" prefHeight="18.0" prefWidth="754.0" textAlignment="CENTER" />
    <AnchorPane prefHeight="200.0" prefWidth="200.0" />
 </VBox>
