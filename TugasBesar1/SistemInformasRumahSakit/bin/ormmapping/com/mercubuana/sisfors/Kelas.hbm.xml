@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+Licensee: 
+License Type: Evaluation
+-->
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.mercubuana.sisfors.Kelas" table="Kelas" lazy="false">
+		<id name="id" column="id" type="integer" unsaved-value="0">
+			<generator class="native">
+			</generator>
+		</id>
+		<property name="namaKelas" column="nama_kelas" unique="true" type="string" length="5" not-null="true" lazy="false"/>
+		<property name="hargaPerMalam" column="harga_per_malam" type="integer" length="8" not-null="true" lazy="false"/>
+		<property name="hargaDokter" column="harga_dokter" type="integer" length="7" not-null="true" lazy="false"/>
+		<set name="ORM_Kamar" lazy="true" cascade="save-update,lock" inverse="true">
+			<key column="Kelasid" not-null="true"/>
+			<one-to-many class="com.mercubuana.sisfors.Kamar"/>
+		</set>
+	</class>
+</hibernate-mapping>

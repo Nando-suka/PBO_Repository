@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="282.0" prefWidth="341.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/22" fx:controller="id.ac.mercubuana.sisteminformasi.ControllerTambahDataKamar">
+   <children>
+      <Button fx:id="btnRekamDataKamarBaru" layoutX="25.0" layoutY="242.0" mnemonicParsing="false" onMouseClicked="#BTNHandleMouseClickRekamDataKamarBaru" text="Rekam Data Kamar Baru" />
+      <Label layoutX="4.0" layoutY="35.0" text="Nama Kamar:" />
+      <Label layoutX="4.0" layoutY="78.0" text="Jenis Kelamin:" />
+      <Label layoutX="4.0" layoutY="4.0" text="Tambah Data Kamar">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="4.0" layoutY="119.0" text="Kapasitas:" />
+      <TextField fx:id="txtNamaKamar" layoutX="97.0" layoutY="31.0" />
+      <Spinner fx:id="spinnerKapasitas" layoutX="97.0" layoutY="115.0" prefHeight="26.0" prefWidth="64.0" />
+      <ChoiceBox fx:id="cmbKelas" layoutX="94.0" layoutY="196.0" prefWidth="150.0" />
+      <Label layoutX="4.0" layoutY="159.0" text="Sisa Tempat:" />
+      <Spinner fx:id="spinnerSisaTempat" layoutX="97.0" layoutY="155.0" prefHeight="26.0" prefWidth="64.0" />
+      <Label layoutX="10.0" layoutY="200.0" text="Kelas:" />
+      <ChoiceBox fx:id="cmbJenisKelamin" layoutX="94.0" layoutY="74.0" prefWidth="150.0" />
+   </children>
+</AnchorPane>
