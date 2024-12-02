@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+Licensee: 
+License Type: Evaluation
+-->
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.mercubuana.sisfopw.JenisWebinar" table="Jenis_Webinar" lazy="false">
+		<id name="id" column="id" type="integer" unsaved-value="0">
+			<generator class="native">
+			</generator>
+		</id>
+		<property name="jenisWebinar" column="jenis_webinar" unique="true" type="string" length="20" not-null="true" lazy="false"/>
+		<property name="biaya" column="biaya" type="integer" length="10" not-null="true" lazy="false"/>
+		<property name="durasi" column="durasi" type="integer" length="1" not-null="true" lazy="false"/>
+		<property name="deskripsiJenis" column="deskripsi_jenis" type="string" length="30" not-null="true" lazy="false"/>
+		<set name="ORM_Webinar" lazy="true" cascade="save-update,lock" inverse="true">
+			<key column="Jenis_Webinarid" not-null="true"/>
+			<one-to-many class="com.mercubuana.sisfopw.Webinar"/>
+		</set>
+	</class>
+</hibernate-mapping>

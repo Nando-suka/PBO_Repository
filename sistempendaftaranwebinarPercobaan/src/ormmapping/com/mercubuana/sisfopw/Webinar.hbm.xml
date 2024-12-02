@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!--
+Licensee: 
+License Type: Evaluation
+-->
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="com.mercubuana.sisfopw.Webinar" table="Webinar" lazy="false">
+		<id name="id" column="id" type="integer" unsaved-value="0">
+			<generator class="native">
+			</generator>
+		</id>
+		<property name="namaWebinar" column="nama_webinar" unique="true" type="string" length="30" not-null="true" lazy="false"/>
+		<property name="kapasitas" column="kapasitas" type="integer" length="1" not-null="true" lazy="false"/>
+		<property name="sisaKapasitas" column="sisa_kapasitas" type="integer" length="1" not-null="true" lazy="false"/>
+		<property name="tanggalPendaftaran" column="tanggal_pendaftaran" type="date" not-null="true" lazy="false"/>
+		<many-to-one name="jenis_Webinar" cascade="lock" column="Jenis_Webinarid" class="com.mercubuana.sisfopw.JenisWebinar" not-null="true" lazy="proxy" access="field">
+		</many-to-one>
+		<set name="ORM_Peserta" lazy="true" cascade="save-update,lock" inverse="true">
+			<key column="Webinarid" not-null="true"/>
+			<one-to-many class="com.mercubuana.sisfopw.Peserta"/>
+		</set>
+	</class>
+</hibernate-mapping>
